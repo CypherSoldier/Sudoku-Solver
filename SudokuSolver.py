@@ -1,4 +1,3 @@
-#RECURSION
 def find_next_empty(puzzle):
     for r in range(9):
         for c in range(9): 
@@ -46,7 +45,19 @@ def solve_sudoku(puzzle):
 
     return False
 
+def print_board(puzzle):
+    for r in range(9):
+        if r % 3 == 0 and r != 0:
+            print("- - - - - - - - - - -")
 
+        for c in range(9):
+            if c % 3 == 0 and c != 0:
+                print(" | ", end="")
+
+            if c == 8:
+                print(puzzle[r][c])
+            else:
+                print(str(puzzle[r][c]) + " ", end="")
 
 if __name__ == '__main__':
     example_board = [
@@ -62,5 +73,10 @@ if __name__ == '__main__':
         [6, 7, -1,   1, -1, 5,   -1, 4, -1],
         [1, -1, 9,   -1, -1, -1,   2, -1, -1]
     ]
-    print(solve_sudoku(example_board))
-    print(example_board)
+
+    if solve_sudoku(example_board):
+        print("Sudoku solved successfully:")
+    else:
+        print("No solution exists for this Sudoku.")
+
+    print_board(example_board)
