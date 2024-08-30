@@ -3,7 +3,7 @@
 ## How It Works
 The program can solve any Sudoku problem by taking into account the following rules:
 Rule 1 - Each row must contain the numbers from 1 to 9, without repetitions
-Rule 2 - Each column must contain the numbers from 1 to 9, without repetitions
+Rule 2 - Each column must contain the numbers from 1 to 9, without repetitions 
 Rule 3 - The digits can only occur once per block (nonet)
 Rule 4 - The sum of every single row, column, and nonet must equal 45
 
